@@ -1,0 +1,15 @@
+function start(){
+    while(frontIsClear()){
+        move();
+    }
+    turnLeft();
+    while(frontIsClear()){
+        if(rightIsBlocked()){
+            putBall();
+            move();
+        }else{
+            move();    
+        }
+    }
+    putBall();
+}
